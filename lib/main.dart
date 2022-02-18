@@ -28,14 +28,21 @@ class _RandromWordsState extends State<RandromWords> {
   final _randromWordPair = <WordPair>[];
   Widget _buildList() {
     return ListView.builder(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16.0),
       itemBuilder: (context, item) {
         if (item.isOdd) return Divider();
         final index = item ~/ 2;
         if (index >= _randromWordPair.length) {
           _randromWordPair.addAll(generateWordPairs().take(10));
         }
+        return _buildRow(_randromWordPair[index]);
       },
+    );
+  }
+
+  Widget _buildRow(WordPair, pair) {
+    return ListTile(
+      title: Text("Hello"),
     );
   }
 
