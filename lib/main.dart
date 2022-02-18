@@ -9,19 +9,52 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.purple),
-      home:Scaffold(
+      home: RandromWords(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class RandromWords extends StatefulWidget {
+  const RandromWords({Key? key}) : super(key: key);
+
+  @override
+  _RandromWordsState createState() => _RandromWordsState();
+}
+
+class _RandromWordsState extends State<RandromWords> {
+  Widget _buildList() {
+    return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+        Container(
+          height: 50,
+          color: Colors.amber[600],
+          child: const Center(child: Text('Entry A')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber[500],
+          child: const Center(child: Text('Entry B')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber[100],
+          child: const Center(child: Text('Entry C')),
+        ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: const Text("WordPair Generator"),
       ),
-      body: Center(
-          child: ElevatedButton(
-        onPressed: () {},
-        child: const Text("Click Me"),
-      )),
+      body: _buildList(),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
         child: Container(height: 50.0),
@@ -31,8 +64,6 @@ class MyApp extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
