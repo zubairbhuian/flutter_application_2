@@ -25,26 +25,17 @@ class RandromWords extends StatefulWidget {
 }
 
 class _RandromWordsState extends State<RandromWords> {
+  final _randromWordPair = <WordPair>[];
   Widget _buildList() {
-    return ListView(
-      padding: const EdgeInsets.all(8),
-      children: <Widget>[
-        Container(
-          height: 50,
-          color: Colors.amber[600],
-          child: const Center(child: Text('Entry A')),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber[500],
-          child: const Center(child: Text('Entry B')),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber[100],
-          child: const Center(child: Text('Entry C')),
-        ),
-      ],
+    return ListView.builder(
+      padding: const EdgeInsets.all(16),
+      itemBuilder: (context, item) {
+        if (item.isOdd) return Divider();
+        final index = item ~/ 2;
+        if (index >= _randromWordPair.length) {
+          _randromWordPair.addAll(generateWordPairs().take(10));
+        }
+      },
     );
   }
 
