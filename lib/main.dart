@@ -3,18 +3,16 @@ import 'package:flutter_application_2/pages/home.dart';
 
 void main() => runApp(const MyApp());
 
-
-
-
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme:
+          ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
- 
     );
   }
 }
