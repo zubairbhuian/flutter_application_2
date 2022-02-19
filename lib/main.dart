@@ -26,21 +26,23 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
               )),
         ),
-        body: Column(
-          children: [
-            Container(
-              color: Colors.red,
-              height: 300,
-            ),
-            Container(
-              color: const Color.fromARGB(248, 92, 214, 108),
-              height: 300,
-            ),
-            Container(
-              color: Color.fromARGB(248, 54, 16, 224),
-              height: 300,
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                color: Colors.red,
+                height: 300,
+              ),
+              Container(
+                color: const Color.fromARGB(248, 92, 214, 108),
+                height: 300,
+              ),
+              Container(
+                color: Color.fromARGB(248, 54, 16, 224),
+                height: 300,
+              ),
+            ],
+          ),
         ),
       ),
     );
