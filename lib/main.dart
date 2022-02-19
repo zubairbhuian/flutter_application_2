@@ -12,10 +12,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
           appBar: AppBar(
+            foregroundColor: Colors.grey,
         actions: [
           ElevatedButton(onPressed: () {}, child: const Icon(Icons.assignment)),
         ],
         title: const Text("My App"),
+        centerTitle: true,
+        leading: TextButton(onPressed:(){}, child: const Icon(Icons.add_a_photo,color: Colors.white,)),
       )),
     );
   }
