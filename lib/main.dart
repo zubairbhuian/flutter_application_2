@@ -40,16 +40,15 @@ class MyContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width / 2.5,
-      height: 50,
-      color: Colors.red,
       child: const ListTile(
-          title: Text(
-        "Easy Explanation",
-        style: TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
-            fontWeight: FontWeight.w700),
-      )),
+        title: Text(
+          "Easy Explanation"
+        ),
+        subtitle: Text("Some Demo Text"),
+        leading: CircleAvatar(
+          child: Icon(Icons.add),
+        ),
+      ),
     );
   }
 }
