@@ -57,7 +57,7 @@ class RandomWordsState extends State<RandomWords> {
           ListTile.divideTiles(context: context, tiles: tiles).toList();
 
       return Scaffold(
-          appBar: AppBar(title: Text('Saved WordPairs')),
+          appBar: AppBar(title: Text('Saved WordPairs'),backgroundColor: Colors.blueGrey),
           body: ListView(children: divided));
     }));
   }
