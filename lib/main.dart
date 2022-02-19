@@ -43,6 +43,13 @@ class MyContainer extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 2.5,
       height: 50,
       color: Colors.red,
+      child: const ListTile(
+          title: Text(
+        "Easy Explanation",
+        style: TextStyle(
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontWeight: FontWeight.w700),
+      )),
     );
   }
 }
