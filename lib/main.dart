@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
           appBar: AppBar(
-            foregroundColor: Colors.grey,
+            foregroundColor: Colors.white,
             actions: [
               ElevatedButton(
                   onPressed: () {}, child: const Icon(Icons.assignment)),
@@ -39,16 +39,42 @@ class MyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const ListTile(
-        title: Text(
-          "Easy Explanation"
+    return ListView(
+      children: [
+        ListTile(
+            onTap: () {},
+            title: const Text("Easy Explanation"),
+            subtitle: const Text("Some Demo Text"),
+            leading: const CircleAvatar(
+              child: Icon(Icons.add),
+            ),
+            trailing: const Icon(Icons.edit)),
+        ListTile(
+            onTap: () {},
+            title: const Text("Easy Explanation"),
+            subtitle: const Text("Some Demo Text"),
+            leading: const CircleAvatar(
+              child: Icon(Icons.add),
+            ),
+            trailing: const Icon(Icons.edit)),
+        ListTile(
+            onTap: () {},
+            title: const Text("Easy Explanation"),
+            subtitle: const Text("Some Demo Text"),
+            leading: const CircleAvatar(
+              child: Icon(Icons.add),
+            ),
+            trailing: const Icon(Icons.edit)),
+        ListTile(
+          onTap: () {},
+          title: const Text("Easy Explanation"),
+          subtitle: const Text("Some Demo Text"),
+          leading: const CircleAvatar(
+            child: Icon(Icons.add),
+          ),
+          trailing: const Icon(Icons.edit),
         ),
-        subtitle: Text("Some Demo Text"),
-        leading: CircleAvatar(
-          child: Icon(Icons.add),
-        ),
-      ),
+      ],
     );
   }
 }
