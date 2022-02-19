@@ -27,19 +27,23 @@ class MyApp extends StatelessWidget {
               )),
         ),
         body: SingleChildScrollView(
-          child: Column(
+          scrollDirection: Axis.horizontal,
+          child: Row(
             children: [
               Container(
                 color: Colors.red,
                 height: 300,
+                width: 200,
               ),
               Container(
                 color: const Color.fromARGB(248, 92, 214, 108),
                 height: 300,
+                width: 200,
               ),
               Container(
                 color: Color.fromARGB(248, 54, 16, 224),
                 height: 300,
+                width: 200,
               ),
             ],
           ),
