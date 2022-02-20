@@ -38,7 +38,8 @@ class MyApp extends StatelessWidget {
                 const Positioned(
                     child: CircleAvatar(
                   radius: 50,
-                  backgroundColor: Color.fromARGB(255, 255, 0, 0),
+                  backgroundImage: NetworkImage(
+                      "https://scontent.fdac80-1.fna.fbcdn.net/v/t1.6435-9/123042841_945908579151890_6246602248743437967_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeE_H0d-mH39OysN5a0qVKJzONjtsS8E12I42O2xLwTXYuSdhNRxWIyj59WjUrCCHZGS3F2ibpUTzwGM7PXONha2&_nc_ohc=l0F_ENj2AJAAX_JvEc8&tn=awbMQwkPTCWm_hVB&_nc_ht=scontent.fdac80-1.fna&oh=00_AT8UeMjyQESlCEbtP6mIeKd9uLJz7Ub3S56DoR2X7JpYmw&oe=6236BD6B"),
                 ))
               ],
             ),
