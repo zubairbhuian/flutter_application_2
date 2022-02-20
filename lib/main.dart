@@ -26,55 +26,23 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                 )),
           ),
-          body: const Center(
-            child: MyContainer(),
+          body: Center(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: 170,
+                  width: 300,
+                  color: const Color.fromARGB(255, 12, 104, 0),
+                ),
+                const Positioned(
+                    child: CircleAvatar(
+                  radius: 50,
+                  backgroundColor: Color.fromARGB(255, 255, 0, 0),
+                ))
+              ],
+            ),
           )),
-    );
-  }
-}
-
-// Mycontainer
-class MyContainer extends StatelessWidget {
-  const MyContainer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ListTile(
-            onTap: () {},
-            title: const Text("Easy Explanation"),
-            subtitle: const Text("Some Demo Text"),
-            leading: const CircleAvatar(
-              child: Icon(Icons.add),
-            ),
-            trailing: const Icon(Icons.edit)),
-        ListTile(
-            onTap: () {},
-            title: const Text("Easy Explanation"),
-            subtitle: const Text("Some Demo Text"),
-            leading: const CircleAvatar(
-              child: Icon(Icons.add),
-            ),
-            trailing: const Icon(Icons.edit)),
-        ListTile(
-            onTap: () {},
-            title: const Text("Easy Explanation"),
-            subtitle: const Text("Some Demo Text"),
-            leading: const CircleAvatar(
-              child: Icon(Icons.add),
-            ),
-            trailing: const Icon(Icons.edit)),
-        ListTile(
-          onTap: () {},
-          title: const Text("Easy Explanation"),
-          subtitle: const Text("Some Demo Text"),
-          leading: const CircleAvatar(
-            child: Icon(Icons.add),
-          ),
-          trailing: const Icon(Icons.edit),
-        ),
-      ],
     );
   }
 }
